@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Mein Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="home-link">
+                <img src="fuchs.jpg" alt="Home" class="home-icon">
+            </a>
+            <div class="title">
+                <h1>Mein Portfolio</h1>
+            </div>
+        </div>
+        <nav>
+            <a href="about.html">Über mich</a>
+            <a href="projects.html">Projekte</a>
+            <a href="contact.html">Kontakt</a>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <h2>Kontaktdetails</h2>
+        <p>Wenn Sie Fragen haben oder mit mir in Kontakt treten möchten, füllen Sie bitte das folgende Formular aus:</p>
+        
+        <form id="contact-form">
+            <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Absenden</button>
+        </p>
+        </form>
+
+        <h3>Alternativ können Sie mich unter folgenden Kontaktdetails erreichen:</h3>
+        <p><strong>E-Mail:</strong> fabio.gerber@outlook.com</p>
+        <p><strong>Telefon:</strong> +48 78 631 46 61</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mein Portfolio | Impressum | Datenschutz</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
