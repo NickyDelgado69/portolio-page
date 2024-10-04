@@ -1,30 +1,28 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 .content {
-    flex: 1; /* Füllt den verfügbaren Platz */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertikale Zentrierung */
-    align-items: center; /* Horizontale Zentrierung */
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 5%;
     color: white;
-    height: calc(100vh - 160px); /* Höhe minus Header und Footer */
-    margin-top: -150px; /* Abstand zur Nav-Bar (anpassen) */
 }
 
 
 footer {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 10px;
+    padding: 0.5%;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -49,27 +47,25 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2.5%;
 }
 
 .project {
     background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    padding: 20px;
-    max-width: 600px;
+    border: 0.5% solid #ddd;
+    margin: 2%;
+    padding: 2.5%;
+    max-width: 60%;
     text-align: left;
 }
 
 .project h3 {
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 1%;
 }
 
 .project p {
-    margin-bottom: 10px;
+    margin-bottom: 1%;
     color: #333;
 }
 
@@ -103,7 +99,7 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+    padding: 1%;
     position: relative;
     width: 100%;
 }
@@ -113,17 +109,17 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 70%;
 }
 
 .home-link {
-    margin-right: 165px;
-    margin-left: -250px;
+    margin-right: -23.5%;
+    margin-left: -21%;
 }
 
 
 .home-icon {
-    width: 80px;
+    width: 15%;
     height: auto;
     transition: transform 0.2s;
 }
@@ -137,7 +133,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    margin-top: 0px;
+    margin-top: 0%;
 }
 
 nav a {
