@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Portfolio-Seite</title>
+    <title>Über mich</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header-content">
             <a href="index.html" class="home-link">
-                <img src="/fuchs.jpg" alt="Home" class="home-icon">
+                <img src="fuchs.jpg" alt="Home" class="home-icon">
             </a>
             <h1 class="title">Mein Portfolio</h1>
         </div>
@@ -20,37 +20,32 @@
             <a href="contact.html">Kontakt</a>
         </nav>
     </header>
+    
 
     <script>
         const homeIcon = document.querySelector('.home-icon');
         
         document.addEventListener('mousemove', (event) => {
-            const mouseX = event.clientX; // X-Position der Maus
-            const mouseY = event.clientY; // Y-Position der Maus
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
             
-            // Berechnung des Winkels zwischen dem Icon und der Maus
             const rect = homeIcon.getBoundingClientRect();
-            const iconX = rect.left + rect.width / 2; // Mittelpunkt des Icons
-            const iconY = rect.top + rect.height / 2; // Mittelpunkt des Icons
+            const iconX = rect.left + rect.width / 2;
+            const iconY = rect.top + rect.height / 2;
     
-            const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI); // Winkel in Grad
+            const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
             
-            // Rotation des Icons basierend auf dem Winkel
             homeIcon.style.transform = `rotate(${angle}deg)`;
         });
     </script>
     
-    
-    
     <div class="content">
-        <h2>Willkommen auf meiner Portfolio-Seite!</h2>
-        <p>Ich heisse Fabio Nicolas Gerber und bin ein Bachelor Student im Bereich von digital Enterprise and AI.</p>
+        <h2>Wer bin ich?</h2>
+        <p>Ich bin ein Webentwickler, der sich auf die Erstellung von ansprechenden Webseiten spezialisiert hat. Hier findest du mehr Informationen über meine berufliche Laufbahn, meine Fähigkeiten und meine Ziele.</p>
     </div>
     
     <footer>
         <p>&copy; 2024 Mein Portfolio | Impressum | Datenschutz</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
