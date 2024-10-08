@@ -10,11 +10,9 @@
     <header>
         <div class="header-content">
             <a href="index.html" class="home-link">
-                <img src="fuchs.jpg" alt="Home" class="home-icon">
+                <img src="Foxicon.webp" alt="Home" class="home-icon">
             </a>
-            <div class="title">
-                <h1>Mein Portfolio</h1>
-            </div>
+            <h1 class="title">Mein Portfolio</h1>
         </div>
         <nav>
             <a href="about.html">Über mich</a>
@@ -22,6 +20,23 @@
             <a href="contact.html">Kontakt</a>
         </nav>
     </header>
+
+    <script>
+        const homeIcon = document.querySelector('.home-icon');
+        
+        document.addEventListener('mousemove', (event) => {
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+            
+            const rect = homeIcon.getBoundingClientRect();
+            const iconX = rect.left + rect.width / 2;
+            const iconY = rect.top + rect.height / 2;
+    
+            const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
+            
+            homeIcon.style.transform = `rotate(${angle}deg)`;
+        });
+    </script>
     
     <div class="content">
         <h2>Kontaktdetails</h2>

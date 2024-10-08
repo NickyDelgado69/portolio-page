@@ -31,7 +31,7 @@ footer {
 
 body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -102,7 +102,9 @@ header {
     padding: 1%;
     position: relative;
     width: 100%;
+
 }
+
 
 .header-content {
     display: flex;
@@ -119,15 +121,20 @@ header {
 
 
 .home-icon {
-    width: 15%;
+    width: 12%;
     height: auto;
     transition: transform 0.2s;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 0;
 }
 
 .title {
     flex-grow: 1;
-    text-align: center;
+    text-align: left;
     color: #fff;
+    padding-bottom: 0;
+    margin-top: -40px;
 }
 
 nav {
@@ -140,6 +147,7 @@ nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
+    margin-top: -30px;
 }
 
 nav a:hover {
