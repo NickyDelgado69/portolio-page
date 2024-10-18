@@ -7,20 +7,96 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <a href="index.html" class="home-link">
-                <img src="Foxicon.webp" alt="Home" class="home-icon">
-            </a>
-            <h1 class="title">Mein Portfolio</h1>
-        </div>
-        <nav>
-            <a href="about.html">Über mich</a>
-            <a href="projects.html">Projekte</a>
-            <a href="contact.html">Kontakt</a>
+    <body>
+        <header>
+            <div class="header-content">
+                <a href="index.html" class="home-link">
+                    <img src="Foxicon.webp" alt="Home" class="home-icon">
+                </a>
+                <h1 class="title">Mein Portfolio</h1>
+            </div>
+            <nav>
+                <a href="about.html">Über mich</a>
+                <a href="projects.html">Projekte</a>
+                <a href="contact.html">Kontakt</a>
+            </nav>
+        </header>
+    
+        <script>
+            const homeIcon = document.querySelector('.home-icon');
+            
+            document.addEventListener('mousemove', (event) => {
+                const mouseX = event.clientX;
+                const mouseY = event.clientY;
+                
+                const rect = homeIcon.getBoundingClientRect();
+                const iconX = rect.left + rect.width / 2;
+                const iconY = rect.top + rect.height / 2;
+        
+                const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
+                
+                homeIcon.style.transform = `rotate(${angle}deg)`;
+            });
+        </script>
         </nav>
     </header>
+    <div class="profile">
+        <img src="Zoro.png" alt="Profilbild">
+        <div class="profile-text">
+            <h2>Über mich</h2>
+            <p>Ich bin ein leidenschaftlicher Webentwickler, der sich auf die Erstellung von benutzerfreundlichen und optisch ansprechenden Webseiten spezialisiert hat.</p>
+        </div>
+    </div>
+    <div class="content language">
+        <h2>Sprachkenntnisse</h2>
+
+        <div class="slider-container">
+            <label for="languageSlider">Deutsch</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="60" step="10" disabled>
+            <div class="slider-value">Muttersprache</div>
+        </div>
+        <div class="slider-container">
+            <label for="languageSlider">Spanisch</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="60" step="10" disabled>
+            <div class="slider-value">Muttersprache</div>
+        </div>
+        <div class="slider-container">
+            <label for="languageSlider">Englisch</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="60" step="10" disabled>
+            <div class="slider-value">C2</div>
+        </div>
+        <div class="slider-container">
+            <label for="languageSlider">Französisch</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="40" step="10" disabled>
+            <div class="slider-value">B2</div>
+        </div>
+        <h2>Sprachkenntnisse</h2>
+
+        <div class="slider-container">
+            <label for="languageSlider">Deutsch</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="60" step="10" disabled>
+            <div class="slider-value">Muttersprache</div>
+        </div>
+        <div class="slider-container">
+            <label for="languageSlider">Spanisch</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="60" step="10" disabled>
+            <div class="slider-value">Muttersprache</div>
+        </div>
+        <div class="slider-container">
+            <label for="languageSlider">Englisch</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="60" step="10" disabled>
+            <div class="slider-value">C2</div>
+        </div>
+        <div class="slider-container">
+            <label for="languageSlider">Französisch</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="40" step="10" disabled>
+            <div class="slider-value">B2</div>
+        </div>
+    </div>
     
+    <footer>
+        <p>&copy; 2024 Mein Portfolio | Impressum | Datenschutz</p>
+    </footer>
 
     <script>
         const homeIcon = document.querySelector('.home-icon');
@@ -37,15 +113,15 @@
             
             homeIcon.style.transform = `rotate(${angle}deg)`;
         });
+
+        // Update Slider Value Display
+        const languageSlider = document.getElementById('languageSlider');
+        const sliderValue = document.querySelector('.slider-value');
+        
+        languageSlider.addEventListener('input', () => {
+            const value = languageSlider.value;
+            sliderValue.textContent = value >= 80 ? 'C1' : (value >= 60 ? 'B2' : 'B1');
+        });
     </script>
-    
-    <div class="content">
-        <h2>Wer bin ich?</h2>
-        <p>Ich bin ein Webentwickler, der sich auf die Erstellung von ansprechenden Webseiten spezialisiert hat. Hier findest du mehr Informationen über meine berufliche Laufbahn, meine Fähigkeiten und meine Ziele.</p>
-    </div>
-    
-    <footer>
-        <p>&copy; 2024 Mein Portfolio | Impressum | Datenschutz</p>
-    </footer>
 </body>
 </html>
