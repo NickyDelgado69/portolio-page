@@ -179,13 +179,6 @@ nav a:hover {
     margin: 0;
 }
 
-
-.slider-container {
-    width: 50%;
-    background-color: #f7f7f7;
-    padding: 1%;
-}
-
 .slider-container label {
     display: block;
     margin-bottom: 5px;
@@ -203,7 +196,27 @@ nav a:hover {
     color: black;
 }
 
-.content-language {
-    justify-content: ;
-
+.content-language-whole {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
+
+.content-language {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.slider-container {
+    width: 70%;
+    margin: 0%;
+    background-color: #f7f7f7;
+    padding: 1%;
+    text-align: center;
+}
+

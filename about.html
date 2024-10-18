@@ -47,7 +47,10 @@
             <p>Ich bin ein leidenschaftlicher Webentwickler, der sich auf die Erstellung von benutzerfreundlichen und optisch ansprechenden Webseiten spezialisiert hat.</p>
         </div>
     </div>
-    <div class="content language">
+
+    <div class="content-language-whole">
+
+        <dic class="content-language">
         <h2>Sprachkenntnisse</h2>
 
         <div class="slider-container">
@@ -70,28 +73,30 @@
             <input type="range" id="languageSlider" min="0" max="60" value="40" step="10" disabled>
             <div class="slider-value">B2</div>
         </div>
-        <h2>Sprachkenntnisse</h2>
-
+    </dic>
+        <dic class="content-language">
+        <h2>Programmiersprachen</h2>
         <div class="slider-container">
-            <label for="languageSlider">Deutsch</label>
-            <input type="range" id="languageSlider" min="0" max="60" value="60" step="10" disabled>
-            <div class="slider-value">Muttersprache</div>
-        </div>
-        <div class="slider-container">
-            <label for="languageSlider">Spanisch</label>
-            <input type="range" id="languageSlider" min="0" max="60" value="60" step="10" disabled>
-            <div class="slider-value">Muttersprache</div>
-        </div>
-        <div class="slider-container">
-            <label for="languageSlider">Englisch</label>
-            <input type="range" id="languageSlider" min="0" max="60" value="60" step="10" disabled>
-            <div class="slider-value">C2</div>
-        </div>
-        <div class="slider-container">
-            <label for="languageSlider">Französisch</label>
+            <label for="languageSlider">Python</label>
             <input type="range" id="languageSlider" min="0" max="60" value="40" step="10" disabled>
-            <div class="slider-value">B2</div>
+            <div class="slider-value">Gute Kenntnisse</div>
         </div>
+        <div class="slider-container">
+            <label for="languageSlider">R</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="50" step="10" disabled>
+            <div class="slider-value">Fortgeschrittene Kenntnisse</div>
+        </div>
+        <div class="slider-container">
+            <label for="languageSlider">HTML</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="60" step="10" disabled>
+            <div class="slider-value">Perfekte Kenntnisse</div>
+        </div>
+        <div class="slider-container">
+            <label for="languageSlider">CSS</label>
+            <input type="range" id="languageSlider" min="0" max="60" value="50" step="10" disabled>
+            <div class="slider-value">Fortgeschrittene Kenntnisse</div>
+        </div>
+    </dic>
     </div>
     
     <footer>
@@ -112,15 +117,6 @@
             const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
             
             homeIcon.style.transform = `rotate(${angle}deg)`;
-        });
-
-        // Update Slider Value Display
-        const languageSlider = document.getElementById('languageSlider');
-        const sliderValue = document.querySelector('.slider-value');
-        
-        languageSlider.addEventListener('input', () => {
-            const value = languageSlider.value;
-            sliderValue.textContent = value >= 80 ? 'C1' : (value >= 60 ? 'B2' : 'B1');
         });
     </script>
 </body>
