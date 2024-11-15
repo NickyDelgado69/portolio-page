@@ -218,79 +218,59 @@ nav a:hover {
 }
 
 /* Zeitlinie */
+/* Timeline container */
 .timeline-container {
     position: relative;
-    width: 100%;
-    height: 100px;
-    margin: 40px 0;
-    overflow: hidden;
+    width: 80%;
+    height: 150px;
+    margin: 40px auto;
 }
 
+/* Timeline itself */
 .timeline {
     position: relative;
-    width: 80%;
+    width: 100%;
     height: 10px;
     background: rgb(191, 191, 191);
-    margin: 40px 0;
-    opacity: 0;
-    transform: translateX(-50%);
-    animation: fadeInAndSlide 1.5s ease forwards;
+    margin-top: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.timeline.animate {
-    opacity: 1;
-    transform: translateX(0);
-}
-
+/* Style for each event */
 .timeline-event {
     position: absolute;
     bottom: 20px;
     transform: translateX(-50%);
-}
-
-.event-content {
-    display: none;
-    position: absolute;
-    top: -40px;
-    padding: 8px 12px;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    white-space: nowrap;
-    font-size: 14px;
-    color: black;
     text-align: center;
-    z-index: 2;
 }
 
-.timeline-event:hover .event-content {
-    display: block;
+.timeline-event .event-content {
+    background: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.timeline-event::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background: #8f0000;
-    border-radius: 50%;
+.timeline-event p {
+    margin: 0;
 }
 
+/* Style for the timeline arrow */
 .timeline::after {
     content: "";
     position: absolute;
     top: 50%;
-    left: 100%; /* Positioniere den Pfeil exakt am Ende der Linie */
-    transform: translateY(-50%); /* Zentriere den Pfeil vertikal */
+    right: 0;
+    transform: translateY(-50%);
     width: 0;
     height: 0;
-    border-left: 40px solid #8f0000; /* Breite und Farbe des Pfeils */
-    border-top: 15px solid transparent; /* Höhe des oberen Teils */
-    border-bottom: 15px solid transparent; /* Höhe des unteren Teils */
+    border-left: 40px solid #8f0000;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
 }
+
 
 
 
