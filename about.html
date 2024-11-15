@@ -49,7 +49,61 @@
                  Prototypen sowie reaktiven Apps gearbeitet.</p>
         </div>
     </div>
+    <div class="profile">
+        <div class="profile-text">
+            <h2>Erfahrungen</h2>
+            <p>Ich habe während meines Studiums an verschiedenen Projekten gearbeitet, die mir ermöglicht haben, meine Fähigkeiten in der Frontend-Entwicklung sowie im Bereich Künstliche Intelligenz zu vertiefen. Dabei lag mein Fokus auf reaktiven Benutzeroberflächen und datengetriebenen Anwendungen.</p>
+        </div>
+        <img src="Zoro.png" alt="Erfahrungen" class="profile-image">
+    </div>
+    <div class="profile">
+        <img src="Zoro.png" alt="Profilbild">
+        <div class="profile-text">
+            <h2>Interessen</h2>
+            <p>Mein Name ist Fabio Nicolas Gerber. Ich bin aktuell Bachelor Student an der BFH im Studiengang Digital Business & AI.
+                 Im Rahmen meines Studiums habe ich bisher Erfahrungen in der Entwicklung von Webseiten gesammelt und bereits an einigen 
+                 Prototypen sowie reaktiven Apps gearbeitet.</p>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="profile-text">
+            <h2>Lebenslauf</h2>
+            <p>Mein Name ist Fabio Nicolas Gerber. Ich bin aktuell Bachelor Student an der BFH im Studiengang Digital Business & AI.
+                 Im Rahmen meines Studiums habe ich bisher Erfahrungen in der Entwicklung von Webseiten gesammelt und bereits an einigen 
+                 Prototypen sowie reaktiven Apps gearbeitet.</p>
+        </div>
+    </div>
+    <!-- Zeitlinie -->
+    <div class="timeline-container">
+        <div class="timeline">
+            <div class="timeline-event" style="left: 10%;">
+                <div class="event-content">
+                    <p>2001: Geburt</p>
+                </div>
+            </div>
+            <div class="timeline-event" style="left: 40%;">
+                <div class="event-content">
+                    <p>2008: Beginn Primarschule</p>
+                </div>
+            </div>
+            <div class="timeline-event" style="left: 70%;">
+                <div class="event-content">
+                    <p>2014: Beginn Sekundarschule</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </script>
+    <script>
+        // Dynamische Positionierung der Eventpunkte
+        document.querySelectorAll('.timeline-event').forEach((event, index, events) => {
+            const totalEvents = events.length;
+            const position = (index / (totalEvents - 1)) * 100; // Gleichmäßig verteilen
+            event.style.left = `${position}%`;
+        });
+    </script>
 
+    
     <div class="content-language-whole">
 
         <dic class="content-language">

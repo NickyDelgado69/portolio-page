@@ -217,3 +217,91 @@ nav a:hover {
     text-align: center;
 }
 
+/* Zeitlinie */
+.timeline-container {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin: 40px 0;
+    overflow: hidden;
+}
+
+.timeline {
+    position: relative;
+    width: 80%;
+    height: 10px;
+    background: rgb(191, 191, 191);
+    margin: 40px 0;
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: fadeInAndSlide 1.5s ease forwards;
+}
+
+.timeline.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-event {
+    position: absolute;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+
+.event-content {
+    display: none;
+    position: absolute;
+    top: -40px;
+    padding: 8px 12px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    z-index: 2;
+}
+
+.timeline-event:hover .event-content {
+    display: block;
+}
+
+.timeline-event::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #8f0000;
+    border-radius: 50%;
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%; /* Positioniere den Pfeil exakt am Ende der Linie */
+    transform: translateY(-50%); /* Zentriere den Pfeil vertikal */
+    width: 0;
+    height: 0;
+    border-left: 40px solid #8f0000; /* Breite und Farbe des Pfeils */
+    border-top: 15px solid transparent; /* Höhe des oberen Teils */
+    border-bottom: 15px solid transparent; /* Höhe des unteren Teils */
+}
+
+
+
+
+@keyframes fadeInAndSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
