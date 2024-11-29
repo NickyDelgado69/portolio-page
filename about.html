@@ -65,70 +65,69 @@
                  Prototypen sowie reaktiven Apps gearbeitet.</p>
         </div>
     </div>
-    <div class="profile">
-        <div class="profile-text">
-            <h2>Lebenslauf</h2>
-            <p>Mein Name ist Fabio Nicolas Gerber. Ich bin aktuell Bachelor Student an der BFH im Studiengang Digital Business & AI.
-                 Im Rahmen meines Studiums habe ich bisher Erfahrungen in der Entwicklung von Webseiten gesammelt und bereits an einigen 
-                 Prototypen sowie reaktiven Apps gearbeitet.</p>
-        </div>
-    </div>
     <!-- Zeitlinie -->
     <div class="timeline-container">
+        <h2 class="timeline-title">Aktueller Lebenslauf:</h2>
         <div class="timeline">
-            <div class="timeline-event">
+            <div class="timeline-event" style="left: 0%">
+                <div class="dot"></div>
                 <div class="event-content">
                     <p>2001: Geburt</p>
                 </div>
             </div>
-            <div class="timeline-event">
+            <div class="timeline-event" style="left: 33.3%">
+                <div class="dot"></div>
                 <div class="event-content">
                     <p>2008: Beginn Primarschule</p>
                 </div>
             </div>
-            <div class="timeline-event">
+            <div class="timeline-event" style="left: 61.9%">
+                <div class="dot"></div>
                 <div class="event-content">
                     <p>2014: Beginn Sekundarschule</p>
                 </div>
             </div>
-            <div class="timeline-event">
+            <div class="timeline-event" style="left: 76.2%">
+                <div class="dot"></div>
                 <div class="event-content">
                     <p>2017: Beginn Kaufmännisches EFZ</p>
                 </div>
             </div>
-            <div class="timeline-event">
+            <div class="timeline-event" style="left: 85.7%">
+                <div class="dot"></div>
                 <div class="event-content">
                     <p>2019: Swisscom Praktikum</p>
                 </div>
             </div>
-            <div class="timeline-event">
+            <div class="timeline-event" style="left: 90.5%">
+                <div class="dot"></div>
                 <div class="event-content">
                     <p>2020: Beginn Berufsmaturität</p>
                 </div>
             </div>
-            <div class="timeline-event">
+            <div class="timeline-event" style="left: 95.2%">
+                <div class="dot"></div>
                 <div class="event-content">
                     <p>2021: Beginn Inlingua Englischkurs</p>
                 </div>
             </div>
-            <div class="timeline-event">
+            <div class="timeline-event" style="left: 100%">
+                <div class="dot"></div>
                 <div class="event-content">
                     <p>2022: Beginn und bis heute BSc Studium BFH</p>
                 </div>
             </div>
         </div>
     </div>
-    
-    </script>
+
+
     <script>
-        // Dynamische Positionierung der Eventpunkte
         document.querySelectorAll('.timeline-event').forEach((event, index, events) => {
             const totalEvents = events.length;
-            const position = (index / (totalEvents - 1)) * 100; // Gleichmäßig verteilen
             event.style.left = `${position}%`;
         });
+    
     </script>
-
     
     <div class="content-language-whole">
 
