@@ -36,26 +36,47 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 120%;
     margin-top: 2.5%;
 }
 
 .project {
+    display: flex;
     background-color: white;
     border: 0.5% solid #ddd;
-    margin: 2%;
     padding: 2.5%;
-    max-width: 60%;
     text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project .project-image {
+    width: 20%; /* Feste Breite, die für alle Projekte gleich ist */
+    height: auto; /* Höhe wird proportional zur Breite angepasst */
+    margin-right: 20px;
+    border-radius: 8px;
+    max-width: 200px; /* Sicherstellen, dass das Bild nie breiter als 200px wird */
+}
+
+.project .project-text {
+    flex-grow: 1;
+    color: #333;
 }
 
 .project h3 {
-    color: #333;
     margin-bottom: 1%;
 }
 
 .project p {
     margin-bottom: 1%;
-    color: #333;
 }
 
 .project a {
@@ -67,15 +88,7 @@ body::before {
     text-decoration: underline;
 }
 
-h2 {
-    color: #333;
-}
-
-h3 {
-    color: #333;
-}
-
-p {
+h2, h3, p {
     color: #333;
 }
 
@@ -288,11 +301,6 @@ nav a:hover {
     z-index:-1;
 }
 
-
-
-
-
-/* Popup-Details */
 .event-content {
     position: absolute;
     bottom: 40px;
@@ -306,33 +314,85 @@ nav a:hover {
     pointer-events: none;
     transition: opacity 0.3s ease;
     z-index: 11;
+    width: 200px;
+    word-wrap: break-word;
 }
 
-/* Hover-Effekt */
 .timeline-event:hover .event-content {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* Punkt-Hover-Effekt */
 .dot:hover {
-    border-top-width: 20px;  /* Vergrößert die Pfeilspitze */
-    transform: scale(1.5) translateX(-50%);  /* Skaliert den Pfeil um 50% */
-    transition: transform 0.3s ease, border-top-width 0.3s ease;  /* Sanfter Übergang */
+    border-top-width: 20px;
+    transform: scale(1.5) translateX(-50%);
+    transition: transform 0.3s ease, border-top-width 0.3s ease;
 }
 
+#contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
 
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
 
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    display: block;
+    margin: 0 auto 15px;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+#contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
 
+#contact-form button {
+    display: inline-block;
+    background-color: #8f0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
 
+#contact-form button:hover {
+    background-color: #6e0000;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #8f0000;
+}
+
+/* Animation */
 @keyframes fadeInAndSlide {
     0% {
         opacity: 0;
-        transform: translateX(-50%);
+        transform: translateY(-50%);
     }
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
