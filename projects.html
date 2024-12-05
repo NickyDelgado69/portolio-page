@@ -21,23 +21,16 @@
         </nav>
     </header>
     
-    
-
     <script>
         const homeIcon = document.querySelector('.home-icon');
         
         document.addEventListener('mousemove', (event) => {
-            const mouseX = event.clientX; // X-Position der Maus
-            const mouseY = event.clientY; // Y-Position der Maus
-            
-            // Berechnung des Winkels zwischen dem Icon und der Maus
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
             const rect = homeIcon.getBoundingClientRect();
-            const iconX = rect.left + rect.width / 2; // Mittelpunkt des Icons
-            const iconY = rect.top + rect.height / 2; // Mittelpunkt des Icons
-    
-            const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI); // Winkel in Grad
-            
-            // Rotation des Icons basierend auf dem Winkel
+            const iconX = rect.left + rect.width / 2;
+            const iconY = rect.top + rect.height / 2;
+            const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
             homeIcon.style.transform = `rotate(${angle}deg)`;
         });
     </script>
@@ -76,7 +69,7 @@
     
     
     <footer>
-        <p>&copy; 2024 Mein Portfolio | Impressum | Datenschutz</p>
+        <p>&copy; 2024 Mein Portfolio</p>
     </footer>
 </body>
 </html>

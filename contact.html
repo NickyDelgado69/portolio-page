@@ -27,13 +27,10 @@
         document.addEventListener('mousemove', (event) => {
             const mouseX = event.clientX;
             const mouseY = event.clientY;
-            
             const rect = homeIcon.getBoundingClientRect();
             const iconX = rect.left + rect.width / 2;
             const iconY = rect.top + rect.height / 2;
-    
             const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
-            
             homeIcon.style.transform = `rotate(${angle}deg)`;
         });
     </script>
@@ -63,7 +60,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Mein Portfolio | Impressum | Datenschutz</p>
+        <p>&copy; 2024 Mein Portfolio</p>
     </footer>
 
     <script src="script.js"></script>
