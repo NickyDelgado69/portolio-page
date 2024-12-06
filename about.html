@@ -129,6 +129,13 @@
     
     </script>
     
+    <div class="fact-container">
+        <h2 class="fact-title">Zufällige Zahlenfakten über mich:</h2>
+        <div class="fact-bar">
+            <div id="factText" class="fact-text"></div>
+        </div>
+    </div>
+
     <div class="content-language-whole">
 
         <dic class="content-language">
@@ -190,13 +197,10 @@
         document.addEventListener('mousemove', (event) => {
             const mouseX = event.clientX;
             const mouseY = event.clientY;
-            
             const rect = homeIcon.getBoundingClientRect();
             const iconX = rect.left + rect.width / 2;
             const iconY = rect.top + rect.height / 2;
-    
             const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
-            
             homeIcon.style.transform = `rotate(${angle}deg)`;
         });
     </script>
