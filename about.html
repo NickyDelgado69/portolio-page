@@ -21,7 +21,7 @@
                 <a href="contact.html">Kontakt</a>
             </nav>
         </header>
-    
+
         <script>
             const homeIcon = document.querySelector('.home-icon');
             
@@ -120,21 +120,11 @@
         </div>
     </div>
 
-
-    <script>
-        document.querySelectorAll('.timeline-event').forEach((event, index, events) => {
-            const totalEvents = events.length;
-            event.style.left = `${position}%`;
-        });
-    
-    </script>
-    
-    <div class="fact-container">
-        <h2 class="fact-title">Zufällige Zahlenfakten über mich:</h2>
-        <div class="fact-bar">
-            <div id="factText" class="fact-text"></div>
-        </div>
+    <div class="fact-banner">
+        <div class="fact-title">Zahlenfakten</div>
+        <div id="factText" class="fact-text">Hier erscheint dein erster Fakt!</div>
     </div>
+    
 
     <div class="content-language-whole">
 
@@ -190,19 +180,31 @@
     <footer>
         <p>&copy; 2024 Mein Portfolio</p>
     </footer>
-
     <script>
-        const homeIcon = document.querySelector('.home-icon');
-        
-        document.addEventListener('mousemove', (event) => {
-            const mouseX = event.clientX;
-            const mouseY = event.clientY;
-            const rect = homeIcon.getBoundingClientRect();
-            const iconX = rect.left + rect.width / 2;
-            const iconY = rect.top + rect.height / 2;
-            const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
-            homeIcon.style.transform = `rotate(${angle}deg)`;
-        });
+const facts = [
+    "Wusstest du, dass die Zahl 0 die einzige Zahl ist, die nicht negativ oder positiv ist?",
+    "Die Zahl Pi ist unendlich und nicht wiederholend.",
+    "Die Zahl 1 ist die einzige Zahl, die in allen Zahlensystemen als Basis verwendet wird.",
+    "Die Zahl 9 ist die höchste einstellige Zahl und wird oft als Symbol für Vollständigkeit verwendet.",
+    "Wasser hat bei 100°C einen Siedepunkt, aber in Höhenlagen kann dieser niedriger sein."
+];
+
+let currentFactIndex = 0; // Start mit dem ersten Fakt
+
+function changeFact() {
+    const factTextElement = document.getElementById("factText");
+
+    // Ändere den Text im Banner
+    factTextElement.textContent = facts[currentFactIndex];
+
+    // Wechsel den Fakt, wenn der aktuelle durch ist
+    currentFactIndex = (currentFactIndex + 1) % facts.length;
+}
+
+// Startet den Textwechsel alle 10 Sekunden, abhängig von der Animationsdauer
+setInterval(changeFact, 10000); // 10 Sekunden, passend zur Dauer der Animation
+
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

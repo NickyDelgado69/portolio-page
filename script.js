@@ -39,35 +39,3 @@ emailjs
   console.error("EmailJS error:", error);
 });
 });
-
-const facts = [
-    "I'm more afraid of jellyfish than sharks",
-    "My favourite food is sushi",
-    "I favour cats over dogs",
-    "My dream is to obtain a private pilot's licence (PPL)",
-];
-
-let currentFactIndex = 0;
-
-function showNextFact() {
-    const factText = document.getElementById("factText");
-    factText.classList.remove('slide-in', 'slide-out'); // Entferne vorherige Animationen
-
-    // Setzt den neuen Fakttext
-    factText.innerText = facts[currentFactIndex];
-    currentFactIndex = (currentFactIndex + 1) % facts.length;
-
-    // Füge die Animationen hinzu
-    setTimeout(() => {
-        factText.classList.add('slide-in');
-    }, 100); // Kurze Verzögerung vor dem Einblenden
-
-    // Entferne die Animation nach einer bestimmten Zeit
-    setTimeout(() => {
-        factText.classList.remove('slide-in');
-        factText.classList.add('slide-out');
-    }, 4000); // 4 Sekunden bis zur Ausblendung
-}
-
-// Führt die Anzeige alle 5 Sekunden aus
-setInterval(showNextFact, 5000);
