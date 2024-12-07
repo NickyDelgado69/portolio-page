@@ -121,11 +121,10 @@
     </div>
 
     <div class="fact-banner">
-        <div class="fact-title">Zahlenfakten</div>
-        <div id="factText" class="fact-text">Hier erscheint dein erster Fakt!</div>
+        <div class="fact-title">Zahlen</div>
+        <div id="factText" class="fact-text">Hier erscheinen ein paar Zahlen zu meiner Person.</div>
     </div>
     
-
     <div class="content-language-whole">
 
         <dic class="content-language">
@@ -182,27 +181,52 @@
     </footer>
     <script>
 const facts = [
-    "Wusstest du, dass die Zahl 0 die einzige Zahl ist, die nicht negativ oder positiv ist?",
-    "Die Zahl Pi ist unendlich und nicht wiederholend.",
-    "Die Zahl 1 ist die einzige Zahl, die in allen Zahlensystemen als Basis verwendet wird.",
-    "Die Zahl 9 ist die höchste einstellige Zahl und wird oft als Symbol für Vollständigkeit verwendet.",
-    "Wasser hat bei 100°C einen Siedepunkt, aber in Höhenlagen kann dieser niedriger sein."
+    "<span class='fact-number'>187</span>: Meine Grösse in cm",
+    "<span class='fact-number'>87-72-100</span>: Meine Körpermasse",
+    "<span class='fact-number'>5</span>: Anzahl der Sprachen, die ich spreche",
+    "<span class='fact-number'>12</span>: Jahre, die ich Karate mache",
+    "<span class='fact-number'>2001</span>: Mein Geburtsjahr",
+    "<span class='fact-number'>2022</span>: Jahr in dem ich mein Studium begonnen habe",
+    "<span class='fact-number'>42</span>: Mein Rekord mit dem Rubic's Cube",
+    "<span class='fact-number'>73</span>: Mein Gewicht in Kilogramm",
+    "<span class='fact-number'>46</span>: Meine Schuhgrösse",
+    "<span class='fact-number'>19.11.</span>: Mein Geburtstag"
 ];
 
-let currentFactIndex = 0; // Start mit dem ersten Fakt
+// Funktion zur zufälligen Farbauswahl
+function getRandomColor() {
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F033FF', '#FF33F0', '#F0F033', '#33F0FF'];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+}
+
+// Funktion für zufällige Auswahl eines Fakts
+function getRandomFact() {
+    const randomIndex = Math.floor(Math.random() * facts.length); // Zufälliger Index
+    return facts[randomIndex];
+}
+
+let currentFact = getRandomFact(); // Zunächst zufälligen Fakt auswählen
 
 function changeFact() {
     const factTextElement = document.getElementById("factText");
 
-    // Ändere den Text im Banner
-    factTextElement.textContent = facts[currentFactIndex];
+    // Ändere den Text im Banner auf einen zufälligen Fakt (mit innerHTML)
+    factTextElement.innerHTML = currentFact;
 
-    // Wechsel den Fakt, wenn der aktuelle durch ist
-    currentFactIndex = (currentFactIndex + 1) % facts.length;
+    // Suche die Zahl im Fakt und ändere ihre Farbe
+    const factNumberElement = factTextElement.querySelector('.fact-number');
+    if (factNumberElement) {
+        factNumberElement.style.color = getRandomColor(); // Wende eine zufällige Farbe an
+    }
+
+    // Wähle für den nächsten Aufruf einen neuen zufälligen Fakt
+    currentFact = getRandomFact();
 }
 
-// Startet den Textwechsel alle 10 Sekunden, abhängig von der Animationsdauer
-setInterval(changeFact, 10000); // 10 Sekunden, passend zur Dauer der Animation
+// Startet den Textwechsel alle 15 Sekunden
+setInterval(changeFact, 13000); // 15 Sekunden, passend zur Dauer der Animation
+
 
     </script>
     <script src="script.js"></script>

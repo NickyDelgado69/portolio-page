@@ -420,25 +420,37 @@ nav a:hover {
     font-size: 1.2em;
     text-align: center;
     padding: 10px 0;
-    top: 0;
-    z-index: 1000;
-    overflow: hidden;
-    height: 70px; /* Höhe anpassen */
+    height: 10%; /* Höhe des Banners */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: 1; /* Stellt das Banner in die Standard-Ebene */
 }
 
 .fact-title {
+    position: absolute; /* Titel bleibt fixiert */
+    top: 10px; /* Abstand vom oberen Rand des Banners */
+    left: 50%; /* Horizontale Zentrierung */
+    transform: translateX(-50%); /* Präzise horizontale Zentrierung */
     font-size: 1.5em;
     font-weight: bold;
-    margin-bottom: 5px;
+    z-index: 10; /* Sicherstellen, dass der Titel immer im Vordergrund bleibt */
 }
 
 .fact-text {
-    white-space: nowrap; /* Verhindert Zeilenumbruch */
+    width: 100%;
+    white-space: nowrap;
     display: inline-block;
-    animation: scrollText 10s linear infinite; /* Animation */
+    animation: scrollText 13s linear infinite; /* Animation für den scrollenden Text */
+    z-index: 5; /* Scrollender Text bleibt hinter dem Titel */
+    margin-top: 40px; /* Abstand zwischen dem Titel und dem Text */
+}
+
+.fact-number {
+    font-weight: bold;
+    font-size: 1.5em; /* Oder ein Wert, der die Zahl größer erscheinen lässt */
+    color: #ff6347; /* Eine auffällige Farbe */
 }
 
 /* Animation für das Durchscrollen des Textes */
