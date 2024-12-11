@@ -22,6 +22,10 @@
             </nav>
         </header>
 
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/680A8wm4qjuPaA5AJ4Mhti?utm_source=generator"
+        width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen;
+        picture-in-picture" loading="lazy"></iframe>
+        
         <script>
             const homeIcon = document.querySelector('.home-icon');
             
@@ -226,8 +230,43 @@ function changeFact() {
 
 // Startet den Textwechsel alle 15 Sekunden
 setInterval(changeFact, 13000); // 15 Sekunden, passend zur Dauer der Animation
+    </script>
 
-
+    <script>
+ async function getAccessToken() {
+    const clientId = '90aaeee152974c9a987ece2d2bb27498'; // Ersetze mit deinem Client ID
+    const clientSecret = 'fdc51d15f6e74a71a011d229fd39995a'; // Ersetze mit deinem Client Secret
+ 
+    const tokenUrl = 'https://accounts.spotify.com/api/token';
+ 
+    const headers = new Headers();
+    headers.append('Authorization', 'Basic ' + btoa(clientId + ':' + clientSecret));
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+ 
+    const body = new URLSearchParams();
+    body.append('grant_type', 'client_credentials');
+ 
+    try {
+        const response = await fetch(tokenUrl, {
+            method: 'POST',
+            headers: headers,
+            body: body
+        });
+ 
+        if (!response.ok) throw new Error('Token Request Failed');
+ 
+        const data = await response.json();
+        const accessToken = data.access_token;
+ 
+        console.log('Access Token:', accessToken);
+        return accessToken;
+ 
+    } catch (error) {
+        console.error('Error fetching the access token:', error);
+    }
+}
+ 
+getAccessToken();
     </script>
     <script src="script.js"></script>
 </body>
