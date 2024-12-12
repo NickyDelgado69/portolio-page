@@ -367,71 +367,66 @@ nav a:hover {
     border: 1px solid #8f0000;
 }
 
-/* Kleinere Höhe für Tablets */
 @media (max-width: 768px) {
     .fact-banner {
         height: 40px;
         line-height: 40px;
-        font-size: 1em; /* Schriftgröße anpassen */
+        font-size: 1em;
     }
 }
 
-/* Noch kleinere Höhe für Mobilgeräte */
 @media (max-width: 480px) {
     .fact-banner {
         height: 30px;
         line-height: 30px;
-        font-size: 0.9em; /* Schriftgröße weiter reduzieren */
+        font-size: 0.9em;
     }
 }
 
 .fact-banner {
-    position: fixed; /* Fixiert die Fact-Banner am Bildschirm */
-    bottom: 0; /* Positioniert sie am unteren Rand */
-    left: 0; /* Am linken Rand des Bildschirms */
-    width: 100%; /* Breite 100% des Bildschirms */
-    background-color: rgba(51, 51, 51, 0.9); /* Halbtransparenter Hintergrund */
-    color: white; /* Weißer Text */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.9);
+    color: white;
     text-align: center;
-    padding: 10px 0; /* Innenabstand oben und unten */
-    font-size: 1.2em; /* Schriftgröße */
-    z-index: 1000; /* Stellt sicher, dass das Banner immer im Vordergrund ist */
+    padding: 10px 0;
+    font-size: 1.2em;
+    z-index: 1000;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-    height: 70px /* Schatten am oberen Rand */
+    height: 70px
 }
 
 .fact-title {
     font-weight: bold;
-    font-size: 1.5em; /* Größere Schrift für den Titel */
-    margin-bottom: 5px; /* Abstand zum Text darunter */
+    font-size: 1.5em;
+    margin-bottom: 5px;
 }
 
 .fact-text {
-    font-size: 1em; /* Normale Schriftgröße für den scrollenden Text */
-    white-space: nowrap; /* Text läuft in einer Zeile */
-    overflow: hidden; /* Verhindert, dass der Text überläuft */
-    animation: scrollText 13s linear infinite; /* Animation für den Text */
+    font-size: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: scrollText 13s linear infinite;
 }
 
 .fact-number {
     font-weight: bold;
-    font-size: 1.5em; /* Oder ein Wert, der die Zahl größer erscheinen lässt */
-    color: #ff6347; /* Eine auffällige Farbe */
+    font-size: 1.5em;
 }
 
-/* Spotify Embed */
 iframe {
     position: fixed;
-    top: 5px; /* Abstand zum Header */
+    top: 5px;
     right: 10px;
-    width: 260px; /* Kleinere Breite */
-    height: 180px; /* Kleinere Höhe */
+    width: 260px;
+    height: 180px;
     border-radius: 12px;
     border: none;
     z-index: 100;
 }
 
-/* Animation für das Durchscrollen des Textes */
 @keyframes scrollText {
     0% {
         transform: translateX(100%);
