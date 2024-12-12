@@ -4,6 +4,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    padding-bottom: 80px;
 }
 
 .content {
@@ -83,18 +84,6 @@ body::before {
 
 h2, h3, p {
     color: #333;
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: rgb(255, 255, 255);
-    padding: 0.5%;
-    text-align: center;
-    width: 100%;
-}
-
-footer p {
-    color: white !important;
 }
 
 header {
@@ -378,23 +367,6 @@ nav a:hover {
     border: 1px solid #8f0000;
 }
 
-.fact-container {
-    max-width: 600px;
-    margin: 50px auto;
-    text-align: center;
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.fact-bar {
-    position: relative;
-    height: 50px;
-    overflow: hidden;
-}
-
 /* Kleinere Höhe für Tablets */
 @media (max-width: 768px) {
     .fact-banner {
@@ -414,43 +386,49 @@ nav a:hover {
 }
 
 .fact-banner {
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    font-size: 1.2em;
+    position: fixed; /* Fixiert die Fact-Banner am Bildschirm */
+    bottom: 0; /* Positioniert sie am unteren Rand */
+    left: 0; /* Am linken Rand des Bildschirms */
+    width: 100%; /* Breite 100% des Bildschirms */
+    background-color: rgba(51, 51, 51, 0.9); /* Halbtransparenter Hintergrund */
+    color: white; /* Weißer Text */
     text-align: center;
-    padding: 10px 0;
-    height: 10%; /* Höhe des Banners */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 1; /* Stellt das Banner in die Standard-Ebene */
+    padding: 10px 0; /* Innenabstand oben und unten */
+    font-size: 1.2em; /* Schriftgröße */
+    z-index: 1000; /* Stellt sicher, dass das Banner immer im Vordergrund ist */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    height: 70px /* Schatten am oberen Rand */
 }
 
 .fact-title {
-    position: absolute; /* Titel bleibt fixiert */
-    top: 10px; /* Abstand vom oberen Rand des Banners */
-    left: 50%; /* Horizontale Zentrierung */
-    transform: translateX(-50%); /* Präzise horizontale Zentrierung */
-    font-size: 1.5em;
     font-weight: bold;
-    z-index: 10; /* Sicherstellen, dass der Titel immer im Vordergrund bleibt */
+    font-size: 1.5em; /* Größere Schrift für den Titel */
+    margin-bottom: 5px; /* Abstand zum Text darunter */
 }
 
 .fact-text {
-    width: 100%;
-    white-space: nowrap;
-    display: inline-block;
-    animation: scrollText 13s linear infinite; /* Animation für den scrollenden Text */
-    z-index: 5; /* Scrollender Text bleibt hinter dem Titel */
-    margin-top: 40px; /* Abstand zwischen dem Titel und dem Text */
+    font-size: 1em; /* Normale Schriftgröße für den scrollenden Text */
+    white-space: nowrap; /* Text läuft in einer Zeile */
+    overflow: hidden; /* Verhindert, dass der Text überläuft */
+    animation: scrollText 13s linear infinite; /* Animation für den Text */
 }
 
 .fact-number {
     font-weight: bold;
     font-size: 1.5em; /* Oder ein Wert, der die Zahl größer erscheinen lässt */
     color: #ff6347; /* Eine auffällige Farbe */
+}
+
+/* Spotify Embed */
+iframe {
+    position: fixed;
+    top: 5px; /* Abstand zum Header */
+    right: 10px;
+    width: 260px; /* Kleinere Breite */
+    height: 180px; /* Kleinere Höhe */
+    border-radius: 12px;
+    border: none;
+    z-index: 100;
 }
 
 /* Animation für das Durchscrollen des Textes */
@@ -462,5 +440,3 @@ nav a:hover {
         transform: translateX(-100%);
     }
 }
-
-
