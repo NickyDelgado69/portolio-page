@@ -94,7 +94,7 @@ header {
     padding: 1%;
     position: relative;
     width: 100%;
-    height: 130px
+    height: 130px;
 }
 
 .index-page header {
@@ -107,7 +107,7 @@ header {
     margin-left: 0.25%;
 }
 
-.header title {
+.header .title {
     text-align: center;
 }
 
@@ -381,97 +381,73 @@ nav a:hover {
 
 #contact-form textarea {
     height: 150px;
-    resize: vertical;
 }
-
-#contact-form button {
-    display: inline-block;
-    background-color: #8f0000;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-
-#contact-form button:hover {
-    background-color: #6e0000;
-}
-
-#contact-form input:focus,
-#contact-form textarea:focus {
-    outline: none;
-    border: 1px solid #8f0000;
-}
-
-@media (max-width: 768px) {
+   
+    @media (max-width: 768px) {
+        .fact-banner {
+            height: 40px;
+            line-height: 40px;
+            font-size: 1em;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .fact-banner {
+            height: 30px;
+            line-height: 30px;
+            font-size: 0.9em;
+        }
+    }
+    
     .fact-banner {
-        height: 40px;
-        line-height: 40px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(51, 51, 51, 0.9);
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1.2em;
+        z-index: 1000;
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+        height: 70px
+    }
+    
+    .fact-title {
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+    
+    .fact-text {
         font-size: 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: scrollText 13s linear infinite;
     }
-}
-
-@media (max-width: 480px) {
-    .fact-banner {
-        height: 30px;
-        line-height: 30px;
-        font-size: 0.9em;
+    
+    .fact-number {
+        font-weight: bold;
+        font-size: 1.5em;
     }
-}
-
-.fact-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(51, 51, 51, 0.9);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 1.2em;
-    z-index: 1000;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-    height: 70px
-}
-
-.fact-title {
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-bottom: 5px;
-}
-
-.fact-text {
-    font-size: 1em;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: scrollText 13s linear infinite;
-}
-
-.fact-number {
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-iframe {
-    position: fixed;
-    top: 5px;
-    right: 10px;
-    width: 260px;
-    height: 180px;
-    border-radius: 12px;
-    border: none;
-    z-index: 100;
-}
-
-@keyframes scrollText {
-    0% {
-        transform: translateX(100%);
+    
+    iframe {
+        position: fixed;
+        top: 5px;
+        right: 10px;
+        width: 260px;
+        height: 180px;
+        border-radius: 12px;
+        border: none;
+        z-index: 100;
     }
-    100% {
-        transform: translateX(-100%);
-    }
-}
+    
+    @keyframes scrollText {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }    
