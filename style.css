@@ -411,7 +411,7 @@ nav a:hover {
         font-size: 1.2em;
         z-index: 1000;
         box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-        height: 70px
+        height: 8.5%
     }
     
     .fact-title {
@@ -434,10 +434,10 @@ nav a:hover {
     
     iframe {
         position: fixed;
-        top: 5px;
-        right: 10px;
-        width: 260px;
-        height: 180px;
+        top: 0.5%;
+        right: 0.5%;
+        width: 15.25%;
+        height: 20%;
         border-radius: 12px;
         border: none;
         z-index: 100;
