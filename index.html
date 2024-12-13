@@ -9,9 +9,6 @@
 <body>
     <header>
         <div class="header-content">
-            <a href="index.html" class="home-link">
-                <img src="Foxicon.webp" alt="Home" class="home-icon">
-            </a>
             <h1 class="title">Mein Portfolio</h1>
         </div>
         <nav>
@@ -31,6 +28,16 @@
     <div class="content">
         <h2>Willkommen auf meiner Portfolio-Seite!</h2>
         <p>Ich heisse Fabio Nicolas Gerber und bin ein Bachelor Student im Bereich von digital Enterprise and AI.</p>
+    </div>
+
+    <body class="index-page">
+    <img src="Foxicon.webp" alt="Home" class="home-icon">
+
+    <div class="content">
+        <h2>Nicky der Fuchs</h2>
+        <p>Das hier ist Nicky. Er ist mein Maskottchen auf dieser Seite und passt gut auf, was Sie auf dieser Seite so machen,
+             er versteckt sich aber in der Ecke der Seite und beobachtet einfach nur. Sollten Sie sich jedoch auf der Seite verlieren,
+             können Sie ihn einfach kurz streicheln und er bringt Sie zurück hierhin.</p>
     </div>
 
     <div class="fact-banner">
@@ -80,16 +87,32 @@
     
     setInterval(changeFact, 13000);
     const homeIcon = document.querySelector('.home-icon');
-        
-        document.addEventListener('mousemove', (event) => {
-            const mouseX = event.clientX;
-            const mouseY = event.clientY;
-            const rect = homeIcon.getBoundingClientRect();
-            const iconX = rect.left + rect.width / 2;
-            const iconY = rect.top + rect.height / 2;
-            const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
-            homeIcon.style.transform = `rotate(${angle}deg)`;
-        });
+
+    document.addEventListener('mousemove', (event) => {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    const rect = homeIcon.getBoundingClientRect();
+    const iconX = rect.left + rect.width / 2;
+    const iconY = rect.top + rect.height / 2;
+
+    const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
+
+    const isAbove = mouseX < iconX;
+
+    let transform = `rotate(${angle}deg)`;
+
+    if (isAbove) {
+        transform += ` scaleY(-1)`;
+    } else {
+        transform += ` scaleY(1)`;
+    }
+
+    homeIcon.style.transform = transform;
+});
+
+
+
         </script>
 
     <script src="script.js"></script>

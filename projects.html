@@ -107,16 +107,29 @@
     setInterval(changeFact, 13000);
 
     const homeIcon = document.querySelector('.home-icon');
-        
-        document.addEventListener('mousemove', (event) => {
-            const mouseX = event.clientX;
-            const mouseY = event.clientY;
-            const rect = homeIcon.getBoundingClientRect();
-            const iconX = rect.left + rect.width / 2;
-            const iconY = rect.top + rect.height / 2;
-            const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
-            homeIcon.style.transform = `rotate(${angle}deg)`;
-        });
+
+    document.addEventListener('mousemove', (event) => {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    const rect = homeIcon.getBoundingClientRect();
+    const iconX = rect.left + rect.width / 2;
+    const iconY = rect.top + rect.height / 2;
+
+    const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
+
+    const isAbove = mouseX < iconX;
+
+    let transform = `rotate(${angle}deg)`;
+
+    if (isAbove) {
+        transform += ` scaleY(-1)`;
+    } else {
+        transform += ` scaleY(1)`;
+    }
+
+    homeIcon.style.transform = transform;
+});
         </script>
 
 </body>
