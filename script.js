@@ -1,36 +1,53 @@
 emailjs.init('kbxgl-dlpla8thBim');
-  document
-    .getElementById("contact-form")
-    .addEventListener("submit", function (event) {
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
     event.preventDefault();
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
-emailjs
-.send("service_sivw9sf", "template_4fowrum", {
-  from_name: name,
-  from_email: email,
-  message: message,
-})
-.then(() => {
+    emailjs
+      .send("service_sivw9sf", "template_4fowrum", {
+        from_name: name,
+        from_email: email,
+        message: message,
+      })
+      .then(() => {
+        showResponseMessage(
+          "Ihre Nachricht wurde erfolgreich versendet!",
+          "green"
+        );
+        document.getElementById("contact-form").reset();
+      })
+      .catch((error) => {
+        showResponseMessage(
+          "Da ist etwas schief gelaufen... Versuchen Sie es bitte erneut.",
+          "red"
+        );
+        console.error("EmailJS error:", error);
+      });
+  });
+
+function showResponseMessage(message, color) {
+  const existingMessage = document.getElementById("response-message");
+  if (existingMessage) {
+    existingMessage.remove();
+  }
+
   const responseMessage = document.createElement("p");
-  responseMessage.textContent = "Ihre Nachricht wurde erfolgreich versendet!";
-  responseMessage.style.color = "green";
+  responseMessage.textContent = message;
+  responseMessage.style.color = color;
   responseMessage.id = "response-message";
   document.getElementById("contact-form").appendChild(responseMessage);
-  document.getElementById("contact-form").reset();
-})
-.catch((error) => {
-  const responseMessage = document.createElement("p");
-  responseMessage.textContent =
-    "Da ist etwas schief gelaufen... Versuchen Sie es bitte erneut.";
-  responseMessage.style.color = "red";
-  responseMessage.id = "response-message";
-  document.getElementById("contact-form").appendChild(responseMessage);
-  console.error("EmailJS error:", error);
-});
-});
+
+  setTimeout(() => {
+    if (responseMessage) {
+      responseMessage.remove();
+    }
+  }, 5000);
+}
+
 
 async function getAccessToken() {
   const clientId = '';
