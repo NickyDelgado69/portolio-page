@@ -115,7 +115,7 @@
     
     <div class="content-language-whole">
 
-        <dic class="content-language">
+        <div class="content-language">
         <h2>Sprachkenntnisse</h2>
 
         <div class="slider-container">
@@ -138,8 +138,8 @@
             <input type="range" id="languageSlider" min="0" max="60" value="40" step="10" disabled>
             <div class="slider-value">B2</div>
         </div>
-    </dic>
-        <dic class="content-language">
+    </div>
+        <div class="content-language">
         <h2>Programmiersprachen</h2>
         <div class="slider-container">
             <label for="languageSlider">Python</label>
@@ -161,7 +161,7 @@
             <input type="range" id="languageSlider" min="0" max="60" value="50" step="10" disabled>
             <div class="slider-value">Fortgeschrittene Kenntnisse</div>
         </div>
-    </dic>
+    </div>
     </div>
     
 <script>
@@ -178,16 +178,30 @@
     "<span class='fact-number'>19.11.</span>: Mein Geburtstag"
 ];
 
+const colors = ['#FF5733', '#33FF57', '#3357FF', '#F033FF', '#FF33F0', '#F0F033', '#33F0FF'];
+let lastColor = null;
+
 function getRandomColor() {
-    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F033FF', '#FF33F0', '#F0F033', '#33F0FF'];
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    return colors[randomIndex];
+    let newColor;
+    do {
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        newColor = colors[randomIndex];
+    } while (newColor === lastColor);
+    lastColor = newColor;
+    return newColor;
 }
 
+let lastFactIndex = -1;
+
 function getRandomFact() {
-    const randomIndex = Math.floor(Math.random() * facts.length);
+    let randomIndex;
+    do {
+        randomIndex = Math.floor(Math.random() * facts.length);
+    } while (randomIndex === lastFactIndex);
+    lastFactIndex = randomIndex;
     return facts[randomIndex];
 }
+
 
 let currentFact = getRandomFact();
 
@@ -230,8 +244,6 @@ if (isAbove) {
 
 homeIcon.style.transform = transform;
 });
-
-homeIcon.style.transform = transform;
     </script>
 
     <script src="script.js"></script>

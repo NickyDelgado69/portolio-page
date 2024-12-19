@@ -73,16 +73,30 @@
         "<span class='fact-number'>19.11.</span>: Mein Geburtstag"
     ];
     
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F033FF', '#FF33F0', '#F0F033', '#33F0FF'];
+    let lastColor = null;
+    
     function getRandomColor() {
-        const colors = ['#FF5733', '#33FF57', '#3357FF', '#F033FF', '#FF33F0', '#F0F033', '#33F0FF'];
-        const randomIndex = Math.floor(Math.random() * colors.length);
-        return colors[randomIndex];
+        let newColor;
+        do {
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            newColor = colors[randomIndex];
+        } while (newColor === lastColor);
+        lastColor = newColor;
+        return newColor;
     }
     
+    let lastFactIndex = -1;
+    
     function getRandomFact() {
-        const randomIndex = Math.floor(Math.random() * facts.length);
+        let randomIndex;
+        do {
+            randomIndex = Math.floor(Math.random() * facts.length);
+        } while (randomIndex === lastFactIndex);
+        lastFactIndex = randomIndex;
         return facts[randomIndex];
     }
+    
     
     let currentFact = getRandomFact();
     
@@ -100,33 +114,33 @@
     }
     
     setInterval(changeFact, 13000);
-
+    
     const homeIcon = document.querySelector('.home-icon');
-
+    
     document.addEventListener('mousemove', (event) => {
     const mouseX = event.clientX;
     const mouseY = event.clientY;
-
+    
     const rect = homeIcon.getBoundingClientRect();
     const iconX = rect.left + rect.width / 2;
     const iconY = rect.top + rect.height / 2;
-
+    
     const angle = Math.atan2(mouseY - iconY, mouseX - iconX) * (180 / Math.PI);
-
+    
     const isAbove = mouseX < iconX;
-
+    
     let transform = `rotate(${angle}deg)`;
-
+    
     if (isAbove) {
         transform += ` scaleY(-1)`;
     } else {
         transform += ` scaleY(1)`;
     }
-
+    
     homeIcon.style.transform = transform;
-});
-        </script>
-
+    });
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
