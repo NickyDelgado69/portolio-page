@@ -48,7 +48,6 @@ function showResponseMessage(message, color) {
   }, 5000);
 }
 
-
 async function getAccessToken() {
   const clientId = '';
   const clientSecret = '';
