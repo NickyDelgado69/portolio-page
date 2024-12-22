@@ -378,7 +378,7 @@ nav a:hover {
     height: 150px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1500px) {
     #contact-form input[type="text"],
     #contact-form input[type="email"],
     #contact-form textarea {
