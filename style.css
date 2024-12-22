@@ -109,6 +109,7 @@ header {
 
 .header .title {
     text-align: center;
+    position: fixed
 }
 
 .header-content {
