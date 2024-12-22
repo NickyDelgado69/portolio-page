@@ -377,6 +377,14 @@ nav a:hover {
 #contact-form textarea {
     height: 150px;
 }
+
+@media screen and (max-width: 768px) {
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form textarea {
+        width: 95%;
+    }
+}
          
  .fact-banner {
     position: fixed;
