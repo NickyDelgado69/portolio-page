@@ -219,12 +219,13 @@ nav a:hover {
 .slider-container label {
     display: block;
     margin-bottom: 1%;
-    color: black;
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 
 .slider-container input[type="range"] {
     width: 100%;
+
 }
 
 .slider-value {
@@ -274,7 +275,7 @@ nav a:hover {
     position: relative;
     width: 100%;
     height: 5%;
-    background: rgb(191, 191, 191);
+    background: rgb(154, 154, 154);
     margin-top: 0;
     position: absolute;
     top: 50%;
@@ -406,7 +407,7 @@ nav a:hover {
     font-size: 1em;
     white-space: nowrap;
     overflow: hidden;
-    animation: scrollText 13s linear infinite;
+    animation: scrollText 14s linear infinite;
 }
     
 .fact-number {
