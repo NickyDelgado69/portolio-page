@@ -437,8 +437,8 @@ nav a:hover {
 
 @media (max-width: 1000px) {
     #spotify-container {
-        width: 10%;
-        right: -10%;
+        width: 50%;
+        right: -50%;
     }
 }
 
