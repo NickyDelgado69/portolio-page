@@ -117,6 +117,12 @@ header {
     z-index: 5;
 }
 
+@media (max-width: 1000px) {
+    .header-label {
+    font-size: 200%;
+    }
+}
+
 .home-link {
     margin-left: -21%;
     display: inline-block
@@ -135,6 +141,12 @@ header {
     position: relative;
     z-index: 2;
     padding-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+    .home-icon {
+        width: 60px;
+    }
 }
 
 .home-icon3 {
