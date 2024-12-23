@@ -425,9 +425,8 @@ nav a:hover {
 #spotify-container {
     position: fixed;
     top: 15%;
-    right: -300px;
-    width: 15.25%;
-    min-width: 300px;
+    right: -600px;
+    width: 600px;
     height: 20%;
     transition: right 0.5s ease;
     z-index: 100;
@@ -438,7 +437,7 @@ nav a:hover {
 
 #toggle-button {
     position: absolute;
-    left: -20%;
+    left: -60px;
     width: 40px;
     height: 40px;
     background: url('spotify.png') no-repeat center center;
