@@ -435,6 +435,13 @@ nav a:hover {
     justify-content: flex-start;
 }
 
+@media (max-width: 1000px) {
+    #spotify-container {
+        width: 60%;
+        right: -60%;
+    }
+}
+
 #toggle-button {
     position: absolute;
     left: -60px;
