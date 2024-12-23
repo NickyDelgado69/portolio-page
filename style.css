@@ -107,11 +107,9 @@ header {
 .index-page header .title {
     margin-top: 1.2%;
     text-align: center;
-    margin-left: 0.25%;
 }
 
 .header .title {
-    position: fixed;
     justify-content: center;
     text-align: center;
     margin-top: 10%;
