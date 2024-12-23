@@ -141,6 +141,15 @@
     
     homeIcon.style.transform = transform;
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const spotifyContainer = document.getElementById("spotify-container");
+    const toggleButton = document.getElementById("toggle-button");
+
+    toggleButton.addEventListener("click", function () {
+        spotifyContainer.classList.toggle("open");
+    });
+});
     </script>
     <script src="script.js"></script>
 </body>
