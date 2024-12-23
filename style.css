@@ -34,7 +34,7 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 120%;
+    width: 100%;
     margin-top: 2.5%;
 }
 
@@ -91,7 +91,8 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 1%;
+    padding-bottom: 1%;
+    padding-top: 1%;
     position: relative;
     width: 100%;
     height: 18%;
@@ -99,6 +100,8 @@ header {
 
 .index-page header {
     height: 18%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 
 .index-page header .title {
@@ -108,7 +111,7 @@ header {
 }
 
 .header .title {
-    display: flex;
+    position: fixed;
     justify-content: center;
     text-align: center;
     margin-top: 10%;
