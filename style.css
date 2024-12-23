@@ -120,19 +120,6 @@ header {
     max-width: 70%;
 }
 
-.index-page .header-label {
-    position: absolute;
-    margin-top: 1.2%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgb(87, 2, 2);
-    font-size: 2.5em;
-    font-weight: 200;
-    top:20%;
-    margin-bottom: 2%;
-    z-index: 5;
-}
-
 .header-label {
     position: absolute;
     top: 0;
@@ -194,7 +181,7 @@ nav {
 }
 
 .index-page nav {
-    margin-top: 3.18%;
+    margin-top: 7.395%;
 }
 
 nav a {
