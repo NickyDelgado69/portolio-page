@@ -425,7 +425,7 @@ nav a:hover {
 #spotify-container {
     position: fixed;
     top: 15%;
-    right: -17%;
+    right: -300px;
     width: 15.25%;
     min-width: 300px;
     height: 20%;
