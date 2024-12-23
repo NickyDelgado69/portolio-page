@@ -118,9 +118,14 @@ header {
 }
 
 .home-link {
-    margin-right: -23.5%;
     margin-left: -21%;
     display: inline-block
+}
+
+.index-page .home-link {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
 }
 
 .home-icon {
