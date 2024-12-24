@@ -51,6 +51,19 @@ body::before {
     width: 60%;
 }
 
+.projectf {
+    display: flex;
+    background-color: white;
+    border: 0.5% solid #ddd;
+    padding: 2.5%;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 5%;
+    width: 60%;
+}
+
 @media (max-width: 1000px) {
     .project {
         width: 90%;
@@ -277,6 +290,12 @@ nav a:hover {
     margin-bottom: 1.5%;
 }
 
+@media (max-width: 1000px) {
+    .content-language-whole {
+        margin-bottom: 5%;
+    }
+}
+
 .content-language {
     display: flex;
     flex-direction: column;
@@ -393,6 +412,10 @@ nav a:hover {
     text-align: center;
 }
 
+.contact-info {
+    margin-bottom: 5%;
+}
+
 @media (max-width: 1000px) {
     #contact-form {
         max-width: 80%;
@@ -433,6 +456,7 @@ nav a:hover {
     color: white;
     text-align: center;
     padding: 10px 0;
+    padding-top: 1%;
     font-size: 1.2em;
     z-index: 1000;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
