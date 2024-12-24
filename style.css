@@ -53,7 +53,7 @@ body::before {
 
 @media (max-width: 1000px) {
     #projects {
-        margin-bottom: 15%;
+        margin-bottom: 25%;
     }
 }
 
@@ -411,7 +411,7 @@ nav a:hover {
 
 @media (max-width: 1000px) {
     #contact-info {
-        margin-bottom: 15%;
+        margin-bottom: 25%;
     }
 }
 
