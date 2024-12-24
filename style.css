@@ -257,6 +257,23 @@ nav a:hover {
     max-width: 27%;
 }
 
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile img {
+        margin: 0 0 20px 0;
+    }
+
+    .profile-text {
+        text-align: justify;
+        max-width: 60%
+    }
+}
+
 .profile h2 {
     margin-bottom: 2%;
 }
