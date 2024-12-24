@@ -264,8 +264,14 @@ nav a:hover {
         text-align: center;
     }
 
+    .profile:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+
     .profile img {
         margin: 0 0 20px 0;
+        width: 60%;
+        height:auto
     }
 
     .profile-text {
