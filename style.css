@@ -177,6 +177,12 @@ header {
     margin: auto;
 }
 
+@media (max-width: 1000px) {
+    .home-icon2 {
+        width: 250px;
+    }
+}
+
 .index-page .content {
     margin-top: -1%;
     text-align: center;
