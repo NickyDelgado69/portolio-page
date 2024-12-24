@@ -261,7 +261,6 @@ nav a:hover {
     .profile {
         flex-direction: column;
         align-items: center;
-        text-align: center;
     }
 
     .profile:nth-of-type(2) {
