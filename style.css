@@ -120,7 +120,7 @@ header {
 @media (max-width: 1000px) {
     .header-label {
     font-size: 150%;
-    margin-top: 10%;
+    margin-top: 50%;
     }
 }
 
