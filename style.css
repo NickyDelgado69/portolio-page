@@ -60,8 +60,14 @@ body::before {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
     width: 60%;
+}
+
+@media (max-width: 1000px) {
+    #projectf {
+        margin-bottom: 10%;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -292,7 +298,7 @@ nav a:hover {
 
 @media (max-width: 1000px) {
     .content-language-whole {
-        margin-bottom: 5%;
+        margin-bottom: 10%;
     }
 }
 
@@ -413,7 +419,13 @@ nav a:hover {
 }
 
 .contact-info {
-    margin-bottom: 5%;
+    margin-bottom: 1%;
+}
+
+@media (max-width: 1000px) {
+    #contact-info {
+        margin-bottom: 10%;
+    }
 }
 
 @media (max-width: 1000px) {
