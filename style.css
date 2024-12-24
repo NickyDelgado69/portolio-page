@@ -51,21 +51,8 @@ body::before {
     width: 60%;
 }
 
-.projectf {
-    display: flex;
-    background-color: white;
-    border: 0.5% solid #ddd;
-    padding: 2.5%;
-    text-align: left;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 1%;
-    width: 60%;
-}
-
 @media (max-width: 1000px) {
-    #projectf {
+    #projects {
         margin-bottom: 15%;
     }
 }
@@ -82,14 +69,6 @@ body::before {
 }
 
 .project .project-image {
-    width: 100%;
-    height: 100%;
-    margin-right: 8%;
-    border-radius: 2%;
-    max-width: 40%;
-}
-
-.projectf .project-image {
     width: 100%;
     height: 100%;
     margin-right: 8%;
