@@ -53,7 +53,7 @@ body::before {
 
 @media (max-width: 1000px) {
     #projects {
-        margin-bottom: 50px;
+        margin-bottom: 150px;
     }
 }
 
