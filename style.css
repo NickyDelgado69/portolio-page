@@ -265,19 +265,6 @@ nav a:hover {
         text-align: center;
     }
 
-    .profile:nth-of-type(2) {
-        flex-direction: column;
-    }
-
-    .profile:nth-of-type(2) .profile-text {
-        order: 2;
-    }
-
-    .profile:nth-of-type(2) img {
-        order: 1;
-        margin-bottom: 20px;
-    }
-
     .profile img {
         width: 60%;
         height: auto;
