@@ -112,7 +112,7 @@ header {
 
 @media (max-width: 1000px) {
     header {
-        min-height: 200px;
+        min-height: 80px;
     }
 }
 
